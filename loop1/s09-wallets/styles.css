@@ -1,0 +1,170 @@
+@import url('https://rsms.me/inter/inter.css');
+
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    color: #000;
+    background-color: #f5cc7c;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.container {
+    width: 1000px;
+    margin: 100px auto;
+}
+
+.frame {
+    height: 550px;
+    display: flex;
+    border-radius: 5px;
+    background: white;
+}
+
+.side,
+.main {
+    overflow: scroll;
+    padding: 50px 40px;
+}
+
+.side {
+    width: 40%;
+    background: #F2F2F2;
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+
+.main {
+    width: 60%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.add-wallet {
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    border: 0;
+    border-radius: 50%;
+    background-color: #000;
+    background-image: url("img/add.svg");
+    background-size: 81%;
+    background-position: center;
+    background-repeat: no-repeat;
+    outline: none;
+    transition: box-shadow .2s;
+}
+
+.title {
+    font-size: 2rem;
+    text-transform: capitalize;
+    letter-spacing: -0.02em;
+}
+
+.add-wallet:hover,
+.add-wallet:focus {
+    opacity: .7;
+}
+
+.add-wallet:focus {
+    opacity: .7;
+    background-image: url("img/activity_indicator.gif");
+}
+
+.wallet {
+    margin: 30px 0;
+    padding: 1em;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    cursor: pointer;
+    transition: box-shadow .15s;
+}
+
+.wallet.current,
+.wallet:hover {
+    box-shadow: 0 0 0 3px #3eace6;
+}
+
+.wallet img {
+    width: 70px;
+    margin-bottom: 1em;
+}
+
+.wallet--card-number,
+.wallet--card-validity {
+    opacity: 0.6;
+}
+
+.wallet--card-number {
+    font-weight: 500;
+    font-size: 1.2em;
+    margin-bottom: .5em;
+}
+
+.balance {
+    font-weight: 600;
+}
+
+.transactions {
+    border-top: 1px solid lightgray;
+}
+
+.transaction {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2.5rem 0;
+}
+
+.transaction--item {
+    display: flex;
+    align-items: center;
+}
+
+.transaction--title {
+    margin-bottom: .3rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.transaction--detail {
+    color: darkgray;
+}
+
+.transaction .balance {
+    font-size: 1.3em;
+}
+
+.transaction.credit .balance::before {
+    content: '+';
+}

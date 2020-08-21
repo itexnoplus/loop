@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Method</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="frame">
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <h2 class="payment-title">Payment Method</h2>
+        <form class="payment-methods">
+            <input type="radio" name="payment" id="visa">
+            <label for="visa" class="payment-method visa">Visa <span class="checkmark"></span></label>
+
+            <input type="radio" name="payment" id="mastercard">
+            <label for="mastercard" class="payment-method mastercard">Mastercard <span class="checkmark"></span></label>
+
+            <input type="radio" name="payment" id="maestro">
+            <label for="maestro" class="payment-method maestro">Maestro <span class="checkmark"></span></label>
+        </form>
+        <a href="#" class="next-step-button">Next Step</a>
+    </div>
+</body>
+
+</html>

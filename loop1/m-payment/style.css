@@ -1,0 +1,154 @@
+/* CSS RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-size: 16px;
+    background: url(img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
+}
+
+.frame {
+    max-width: 400px;
+    background: #fff;
+    margin: 200px auto;
+    overflow: hidden;
+    padding-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: #dedede;
+    border-radius: 100%;
+    margin-right: 5px;
+}
+
+.active {
+    background-color: #aaa;
+}
+
+.payment-title {
+    margin: 20px 0 30px;
+}
+
+.payment-methods {
+    text-align: left;
+}
+
+.payment-method {
+    display: block;
+    position: relative;
+    font-size: 18px;
+    padding: 1.5rem 0 1.5rem 5rem;
+    color: rgba(0, 0, 0, .4);
+    cursor: pointer;
+    transition: background-color .15s;
+}
+
+.payment-method:hover {
+    background-color: #f1f1f1;
+}
+
+.payment-methods input {
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+}
+
+.payment-method::before {
+    content: "";
+    left: 1em;
+    width: 2.5rem;
+    height: 100px;
+}
+
+.payment-method.visa::before {
+    background-image: url('img/visa.svg');
+}
+
+.payment-method.mastercard::before {
+    background-image: url('img/mastercard.svg');
+}
+
+.payment-method.maestro::before {
+    background-image: url('img/maestro.svg');
+}
+
+.payment-method::before,
+.checkmark {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.payment-method::after {
+    right: 1em;
+    width: 20px;
+}
+
+.checkmark {
+    right: 1em;
+    width: 20px;
+}
+
+input:checked+.payment-method>.checkmark {
+    background-image: url('img/check.svg');
+}
+
+input:checked+.payment-method {
+    color: #000;
+    font-weight: 700;
+}
+
+.next-step-button {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    color: #fff;
+    background-color: #5b8dda;
+    text-decoration: none;
+}
+
+.next-step-button::after {
+    content: "";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background: url('img/arrow.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    margin-left: .3em;
+    margin-bottom: -.2em;
+}
+
+..next-step-button:hover {
+    background-color: #517ec3;
+}
+
+.next-step-button:active {
+    transform: translateY(2px);
+}
